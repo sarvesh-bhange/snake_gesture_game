@@ -1,4 +1,5 @@
 import pygame
+from GameWindow import GameWindow
 from StartWindow import *
 from constants import *
 
@@ -9,6 +10,7 @@ pygame.display.set_caption("Snake Gesture")
 clock=pygame.time.Clock()
 
 start_window=StartWindow()
+game_window= GameWindow(PERSIAN_BLUE)
 
 run=True
 
