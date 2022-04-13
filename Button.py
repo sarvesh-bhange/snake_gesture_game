@@ -52,8 +52,8 @@ class Button(object):
         surface.blit(button_text_render,(button_text_x,button_text_y))
 
 
-    def render(self,win,):
-        self.button_draw(win)
+    def render(self,surface):
+        self.button_draw(surface)
         
 
 

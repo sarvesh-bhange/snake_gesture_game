@@ -1,4 +1,6 @@
+from GameWindow import GameWindow
 from StartWindow import StartWindow
+from constants import *
 
 
 class Navigation (object):
@@ -8,7 +10,14 @@ class Navigation (object):
 
         self.props= None
 
-        self.windows= {
+        self.windows= {"StartWindow":StartWindow(),"GameWindow":GameWindow(BLUE)}
 
-            "StartWindow":StartWindow
-        }
+
+    def render(self,surface):
+        self.windows[self.current_window].render(surface,self.props,self.navigate)
+
+
+    def navigate(self,destination_window,props=None):
+        self.current_window= destination_window
+
+        self.props=props

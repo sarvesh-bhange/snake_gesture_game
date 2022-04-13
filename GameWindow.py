@@ -31,6 +31,6 @@ class GameWindow(object):
 
         self.grid_draw(surface,ROWS,WHITE,WIDTH)
 
-    def render(self,surface):
+    def render(self,surface,props,navigate):
         self.draw_window(surface)
         

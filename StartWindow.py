@@ -10,10 +10,10 @@ class StartWindow(object):
         self.quit_button= Button(500,200,BUTTON_WIDTH,BUTTON_HEIGHT,WHITE,BLACK,TEXT_SIZE,"Quit")
 
 
-    def draw_window(self,win):
-        win.fill(PERSIAN_BLUE)
-        self.start_button.button_draw(win)
-        self.quit_button.button_draw(win)
+    def draw_window(self,surface):
+        surface.fill(BLUE)
+        self.start_button.button_draw(surface)
+        self.quit_button.button_draw(surface)
 
-    def render(self,win):
-        self.draw_window(win)
+    def render(self,surface, props, navigate):
+        self.draw_window(surface)
