@@ -13,8 +13,8 @@ class Navigation (object):
         self.windows= {"StartWindow":StartWindow(),"GameWindow":GameWindow(BLUE)}
 
 
-    def render(self,surface):
-        self.windows[self.current_window].render(surface,self.props,self.navigate)
+    def render(self,surface,events):
+        self.windows[self.current_window].render(surface,self.props,self.navigate,events)
 
 
     def navigate(self,destination_window,props=None):

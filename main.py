@@ -26,8 +26,7 @@ while run:
         if event.type == pygame.QUIT:
             run=False
 
-    navigator.render(surface)
-    # start_window.render(surface)
+    navigator.render(surface,events)
     pygame.display.update()
 
 pygame.quit

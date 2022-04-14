@@ -32,11 +32,11 @@ class Button(object):
     def button_draw(self,surface):
         button_rect= pygame.Rect(self.x,self.y,self.width,self.height)
 
-        pygame.draw.rect(surface,self.color,(button_rect))
+        pygame.draw.rect(surface,self.button_color,(button_rect))
 
         button_text= pygame.font.SysFont("comicsans",self.text_size)
 
-        button_text_render= button_text.render(self.text,1,(self.button_color))
+        button_text_render= button_text.render(self.text,1,(self.color))
 
         button_text_rect= button_text_render.get_rect()
 
